@@ -1,4 +1,4 @@
 # PixelArt
 
 Well, not a Pixel Art.
-A small concept of a drawing grid, to paint a few simulated "pixels". 
+A small concept of a drawing grid where you can paint a few simulated "pixels". 
