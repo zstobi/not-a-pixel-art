@@ -1,0 +1,77 @@
+@mixin centered {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+@mixin allArea {
+    height: 100%;
+    width: 100%;
+}
+
+$generic-radius: 8px;
+
+.palette-inside {
+    
+    // design
+    @include allArea;
+
+    // structure
+    @include centered;
+
+    grid-template-rows: 1fr 8fr 0.5fr;
+    gap: 20px
+}
+
+.pageBtns {
+    // color
+    background-color: #322644;
+    
+    // design
+    @include allArea;
+
+    // structure
+    @include centered;
+}
+
+.pickerBtns {
+    // design
+    @include allArea;
+
+    // structure
+    @include centered;
+    gap: 10px;
+}
+
+.paletteBtns {
+    // design
+    @include allArea;
+
+    // structure
+    @include centered;
+    gap: 10px;
+}
+
+.suggestedColors {
+    // design
+    @include allArea;
+
+    // structure
+    @include centered;
+    gap: 10px;
+}
+
+.fsBtn {
+    // color
+    background-color: #322644;
+    
+    // design
+    @include allArea;
+    border-bottom-left-radius: $generic-radius;
+    border-bottom-right-radius: $generic-radius;
+    margin: 12px;
+
+    // structure
+    display: grid;
+    place-items: center;
+}

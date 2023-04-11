@@ -1,0 +1,87 @@
+$generic-purple: #1A1423;
+
+$generic-radius: 8px;
+
+:host {
+    // design
+    height: 100vh;
+
+    // structure
+    display: grid;
+    place-items: center;
+}
+
+.screen {
+    // color
+    background-color: #000;
+
+    // design
+    width: 800px;
+    height: 850px;
+
+    padding: 8px;
+    border-radius: $generic-radius;
+
+    // structure
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 8fr;
+    gap: 8px;
+}
+
+.palette {
+    // color
+    background-color: $generic-purple;
+
+    // design
+    width: 100%;
+    height: 100%;
+
+    border-radius: $generic-radius;
+}
+
+.grid {
+    // color
+    background-color: $generic-purple;
+
+    // design
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    // structure
+    display: grid;
+    grid-template-columns: repeat(45,1fr);
+    grid-template-rows: repeat(39,1fr);
+    gap: var(--gridGap,1px);
+
+    grid-column: 2;
+}
+
+.message {
+    display: none;
+}
+
+@media ( max-width : 850px ) {
+    .screen {
+        display: none;
+    }
+
+    :host {
+        background-image: none;
+        background-color: #494949;
+    }
+
+    .message {
+        //color
+        color: #000000;
+        
+        // design
+        padding: 20px;
+
+        // structure
+        display: grid;
+        place-items: center;
+        text-align: center;
+    }
+}

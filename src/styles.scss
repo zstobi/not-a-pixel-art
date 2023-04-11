@@ -1,1 +1,223 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: Arial, sans-serif;
+}
+
+@mixin generalBtn {
+    width: 70px;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+@mixin allArea {
+    height: 100%;
+    width: 100%;
+}
+
+@mixin spaceNone {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin noBtn {
+    padding: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+html, body {
+    @include spaceNone;
+}
+
+.pixel {
+    cursor: pointer;
+    background-color: #201f1e;
+}
+
+// btns design in order
+
+.noBtn {
+    @include noBtn;
+}
+
+.reset {
+    // color
+    background-color: #d10000;
+    color: #ff0;
+
+    // design
+    @include noBtn;
+    @include generalBtn;
+    box-shadow: 3px 3px 1px #5f0000;
+
+    // animations
+    transition: all 1.5ms ease;
+}
+.reset:active {
+    box-shadow: 0px 0px 0px, inset 3px 3px 1px #5f0000;
+    transform: translateX(1px);
+    color: #caca00;
+}
+
+.gridBtn {
+    // color
+    background-color: #fff;
+    color: #1400c5;
+
+    // design
+    @include noBtn;
+    @include generalBtn;    
+    box-shadow: 3px 3px 1px #bdbdbd;
+
+    // animations
+    transition: all 1.5ms ease;
+}
+.gridBtn:active {
+    box-shadow: 0px 0px 0px, inset 3px 3px 1px #bdbdbd;
+    transform: translateX(1px);
+    color: #0c0079;
+}
+
+.cpi {
+    // color
+    background-color: inherit;
+
+    // design
+    border-radius: 6px;
+    border: 0.5px solid #fff;
+    cursor: pointer;
+}
+
+.cp {
+    // color
+    background-color: var(--colorPickerBg, #fff);
+
+    // design
+    @include noBtn;
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    border: 0.5px solid #fff;
+}
+
+.suggested {
+    @include noBtn;
+
+    // design
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}
+
+.eraser {
+    // design
+    @include noBtn;
+    padding: 0px;
+
+    width: 60px;
+    height: 20px;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 14px;
+
+    // structure
+    display: flex;
+}
+.left {
+    // color
+    background-color: crimson;
+
+    // design
+    @include allArea;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 4px;
+}
+.right {
+    // color
+    background-color: dodgerblue;
+
+    // design
+    @include allArea;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 10px;
+}
+
+.eraser:focus {
+    border: 2px solid #ff0;
+}
+
+.fs {
+    // color
+    background-color: #322644;
+
+    // design
+    // margin: 15px;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+
+    // structure
+    display: grid;
+    place-items: center;
+}
+.icon {
+    // color
+    color: #bdbdbd;
+
+    // design
+    width: 25px;
+    height: 25px;
+}
+.fs:active {
+    // color
+    background-color: #000;
+
+    // animation
+    animation: clicked 100ms;
+}
+.fs:active .icon {
+    color: #322644;
+}
+
+// suggested colors
+
+.s1 {
+    background-color: #000;
+}
+.s2 {
+    background-color: #0000ff;
+}
+.s3 {
+    background-color: #00bfff;
+}
+.s4 {
+    background-color: #008000;
+}
+.s5 {
+    background-color: #004700;
+}
+.s6 {
+    background-color: #f00;
+}
+.s7 {
+    background-color: #ff7b00;
+}
+.s8 {
+    background-color: #ffff00;
+}
+.s9 {
+    background-color: #924614;
+}
+.s10 {
+    background-color: #fff;
+}
+
+// animations
+
+@keyframes clicked {    
+    25% { transform: translateY(1.5px); }
+    75% { transform: translateY(-1.5px); }
+}

@@ -1,0 +1,43 @@
+<div class="palette-inside">
+    <div class="pageBtns">
+        <button class="reset">reset</button>
+        <button class="gridBtn">no-grid</button>
+    </div>
+    <div class="paletteBtns">
+
+        <div class="pickerBtns">
+            <input type="color" class="cpi">
+            <button class="suggested cp1" [style.backgroundColor]="colorPicker()"></button>
+        </div>
+
+        <div class="suggestedColors">
+            <button class="suggested s1"></button>
+            <button class="suggested s2"></button>
+            <button class="suggested s3"></button>
+            <button class="suggested s4"></button>
+            <button class="suggested s5"></button>
+            <button class="suggested s6"></button>
+            <button class="suggested s7"></button>
+            <button class="suggested s8"></button>
+            <button class="suggested s9"></button>
+            <button class="suggested s10"></button>
+        </div>
+        
+        <div class="others">
+            <button class="eraser">
+                <div class="left"></div>
+                <div class="right"></div>
+            </button>
+        </div>
+
+    </div>
+    <div class="fsBtn">
+        <button class="fs" (click)="fsToggle()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+            </svg>          
+        </button>
+    </div>
+</div>
+
+<!-- aca restaria crear los inputs para seleccionar los colores y hacer data binding asi el color seleccionado va directamente al boton -->
